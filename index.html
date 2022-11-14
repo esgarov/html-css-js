@@ -5,21 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        div{
+            margin-top: 10px;
+        }
+        form{
+            width: 300px; 
+        }
+        input{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <form action="results.html" method="GET">
         <div>
-            <label>Username</label>
-            <input name="username" id="username">
+            <label for="username">Username</label>
+            <input name="username" id="username" value="Username">
         </div>
         <div>
             <label for="password">Password</label>
-            <input name="password" id="password">
+            <input type="password" name="password" id="password" placeholder="8-32 Zeichen; min. 2 Sonderzeichen"
+            required>
         </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="aga" min="10" max="200" step="10">
+        </div>
+        <div><label for="date">Birthday</label>
+        <input type="date" name="date" id="date" min="2022-11-11" max="2022-11-15"></div>
+        <div><label for="banana">Banana</label>
+        <input type="checkbox" name="banana" id="Banana"></div>
+        <div><label for="apple">Apple</label>
+            <input type="checkbox" name="apple" id="Apple"></div>
 
-        <button type="submit">
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+
+        <div>
+        <button type="reset" style="background-color:orange">Reset</button>
+        <button type="submit" style="background-color:aqua">
             Submit
         </button>
+        </div>
         
     </form>
 </body>
