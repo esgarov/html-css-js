@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-    <form action="results.html" method="GET">
+    <form action="results.html" method="GET" enctype="multipart/form-data">
         <div>
             <label for="username">Username</label>
             <input name="username" id="username" value="Username">
@@ -48,6 +48,26 @@
                 <input type="radio" name="gender" id="male" value="male">
                 <label for="female">Female</label>
                 <input type="radio" name="gender" id="female" value="female">
+            </div>
+
+        <div><label for="eyeColor">Eye Color</label>
+        <select name="eyeColor" id="eyeColor" multiple>
+            <option value="green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="Brown">Brown</option>
+            <option value="Red">Red</option>
+        </select>
+        </div>
+
+        <div>
+            <textarea name="bio" id="bio" rows="10" cols="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi saepe provident adipisci assumenda sunt commodi asperiores vero, harum eos voluptate.</textarea>
+        </div>
+
+            <input type="hidden" name="hidden" value="101">
+
+            <div>
+                <label for="file">File</label>
+                <input type="file" name="file" id="file">
             </div>
 
         <div>

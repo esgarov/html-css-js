@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Formular</title>
+    <style>
+        div {
+          margin-top: 10px;
+        }
+        form {
+          width: 300px;
+        }
+        input {
+          width: 100%;
+        }
+      </style>
+</head>
+<body>
+    <form action="results1.html">
+
+        <div>
+            <label for="marke">Marke</label>
+                <select name="marke" id="marke">
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="VW">VW</option>
+                    <option value="Renault">Renault</option>
+                    <option value="Opel">Opel</option>
+                </select>
+        </div>
+
+        <div>
+            <label for="Model">Model</label>
+            <input type="text" name="text" id="text">
+        </div>
+
+        <div>
+            <label for="Erstzulassung">Erstzulassung</label>
+            <input type="date" name="date" id="date">
+        </div>
+
+        <div>
+            <label>
+              Kilometerstand
+              <input type="number" 
+              name="number" 
+              id="number" 
+              placeholder="km"
+              required>
+            </label>
+          </div>
+
+          <div>
+            
+            <button type="submit" style="background-color: rgb(255, 149, 0);">Zur Terminauswahl</button>
+            <button type="reset" style="background-color: orange;">Reset</button>
+          </div>
+
+    </form>
+</body>
+</html>
