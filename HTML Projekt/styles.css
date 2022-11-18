@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+:root{
+    --color-main: #0ac788;
+    --color-secondary: rgb(140, 10, 216);
+    --color-translucent: rgba(115, 159, 196, 0.8);
+    --font-size: calc(1vh + 1vw);
+    --font-default: "Ubuntu", sans-serif;
+}
+
+body{
+    margin: 0px;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin: 0em 0em;
+    border-radius: 4px;
+    width: 100%;
+    padding-top: 10em;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;            /*links/rechts ausrichtung*/
+    align-items: center;
+    gap: 2em;
+}
+
+.col{
+    padding: 1em;
+    background-color: var(--color-translucent);
+    border-radius: 25px;
+    border-color: var(--color-secondary);
+    border-style: double;
+    font-family: var(--font-default);
+    font-size: .80rem;
+    width: 15%;
+    margin: 0em 0.5em;
+    min-width: fit-content;
+    min-height: 15em;
+}
+
+ul.list{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    height: 80%;
+}
+
+ul.list>li>a{
+    font-family: var(--font-default);
+    font-size: medium;
+    text-decoration: none;
+    color: var(--color-secondary);
+    display: block;
+    margin: .4em 0em;
+    transition: all 150ms ease-in;
+}
+
+.list>li>a:hover{
+    color: var(--color-main);
+    font-weight: bolder;
+    /*font-size: large;*/               /*nicht erwünscht*/
+}
+
+.bookmark-title{
+    font-size: 2em;
+    color: var(--color-secondary);
+}
+
+#clock{
+    font-family: sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: .30em;
+    text-shadow: 5px 5px 5px var(--color-translucent);
+}
+
+@media only screen and (max-width: 1060px) {
+    .container{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .container > .row{
+        flex-direction: column;
+    }
+    .row > .col{
+        width: auto;
+        min-width: 50vw;
+        margin: 1em 0em;
+    }
+}
+
+/*.row > .col :nth-child(2){
+    margin-right: 50px;;
+}*/
